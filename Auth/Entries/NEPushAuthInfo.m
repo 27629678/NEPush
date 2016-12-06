@@ -35,7 +35,7 @@
         
         NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
         if (error) {
-            DDLogDebug(@"%@", [error pushErrorMessageWithDomain:@"NEPushServiceHelper"]);
+            NSLog(@"%@", [error pushErrorMessageWithDomain:@"NEPushServiceHelper"]);
             return nil;
         }
         

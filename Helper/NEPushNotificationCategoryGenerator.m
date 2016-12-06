@@ -15,30 +15,32 @@
 + (NSString *)json
 {
     
-    NSArray* ac4mail = @[ @{ @"titile"       : @"标为已读",
-                             @"identifier"   : kNEPushMarkMailAsReadActionIdentifier,
-                             @"options"      : @(NEPushActionOptionBackground)
-                             },
-                          @{ @"titile"       : @"删除",
-                             @"identifier"   : kNEPushMarkMailAsDeletedActionIdentifier,
-                             @"options"      : @(NEPushActionOptionBackground |
-                                 NEPushActionOptionDestructive |
-                                 NEPushActionOptionAuthRequired)
-                             }];
-    NSArray* ac4todo = @[ @{ @"titile"       : @"标为已完成",
-                             @"identifier"   : kNEPushMarkToDoAsFinishedActionIdentifier,
-                             @"options"      : @(NEPushActionOptionBackground)
-                             }];
+//    NSArray* ac4mail = @[ @{ @"titile"       : @"标为已读",
+//                             @"identifier"   : kNEPushMarkMailAsReadActionIdentifier,
+//                             @"options"      : @(NEPushActionOptionBackground)
+//                             },
+//                          @{ @"titile"       : @"删除",
+//                             @"identifier"   : kNEPushMarkMailAsDeletedActionIdentifier,
+//                             @"options"      : @(NEPushActionOptionBackground |
+//                                 NEPushActionOptionDestructive |
+//                                 NEPushActionOptionAuthRequired)
+//                             }];
+//    NSArray* ac4todo = @[ @{ @"titile"       : @"标为已完成",
+//                             @"identifier"   : kNEPushMarkToDoAsFinishedActionIdentifier,
+//                             @"options"      : @(NEPushActionOptionBackground)
+//                             }];
     
     NSDictionary* dict = @{ @"options"      : @(NEPushAuthOptionAlert |
-                                NEPushAuthOptionBadge |
-                                NEPushAuthOptionSound),
-                            @"categories"   : @[ @{ @"identifier"   : kNEPushMailCategoryPushIdentifier,
-                                                    @"actions"      : ac4mail
-                                                     },
-                                                 @{ @"identifier"   : kNEPushToDoCategoryIdentifier,
-                                                    @"actions"      : ac4todo
-                                                     }]
+                                                NEPushAuthOptionBadge |
+                                                NEPushAuthOptionSound),
+                            @"categories"   : @[
+//                                                  @{  @"identifier"   : kNEPushMailCategoryPushIdentifier,
+//                                                      @"actions"      : ac4mail
+//                                                    },
+//                                                  @{  @"identifier"   : kNEPushToDoCategoryIdentifier,
+//                                                      @"actions"      : ac4todo
+//                                                     }
+                            ]
                            };
     NSError* error = nil;
     NSData* data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:&error];

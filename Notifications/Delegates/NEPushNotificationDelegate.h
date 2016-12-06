@@ -6,6 +6,7 @@
 //  Copyright © 2016年 XY Co., Ltd. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
 @protocol NEPushNotificationDelegate <NSObject>

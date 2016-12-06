@@ -11,7 +11,7 @@
 
 #import "NEPushManager.h"
 #import "NEPushConstants.h"
-#import "NEPushServiceLogger.h"
+//#import "NEPushServiceLogger.h"
 
 #import "NSError+NEPushMessager.h"
 #import "NSString+NEPushError.h"

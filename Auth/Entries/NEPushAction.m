@@ -10,6 +10,7 @@
 
 #import "NEPushConstants.h"
 
+#import <UIKit/UIKit.h>
 #import <UserNotifications/UserNotifications.h>
 
 @implementation NEPushAction

@@ -9,9 +9,11 @@
 #import "NEPushAuthForIOS10_X.h"
 
 #import "NEPushConstants.h"
-#import "NEPushServiceLogger.h"
+//#import "NEPushServiceLogger.h"
 
 #import "NSError+NEPushMessager.h"
+
+#import <UIKit/UIKit.h>
 
 @interface NEPushAuthForIOS10_X ()
 
@@ -37,8 +39,8 @@
     NSUInteger options = [self userAuthOptionWithOption:auth.options];
     [center requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
         if (error) {
-            DDLogError(@"%@", error.authErrorMessage);
-            [NEPushServiceLogger logEvent:kNEPushServiceLogEventRegister message:error.authErrorMessage];
+            NSLog(@"%@", error.authErrorMessage);
+//            [NEPushServiceLogger logEvent:kNEPushServiceLogEventRegister message:error.authErrorMessage];
         }
     }];
     

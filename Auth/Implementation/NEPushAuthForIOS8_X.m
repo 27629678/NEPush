@@ -6,6 +6,7 @@
 //  Copyright © 2016年 XY Co., Ltd. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "NEPushAuthForIOS8_X.h"
 
 @implementation NEPushAuthForIOS8_X
